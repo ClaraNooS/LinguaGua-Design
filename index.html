@@ -37,11 +37,10 @@
     <!-- 顶部导航 -->
     <header class="fixed top-0 w-full bg-white border-b border-gray-200 h-16 flex items-center px-8 z-50">
         <div class="flex items-center gap-3">
-            <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">L</div>
-            <span class="text-xl font-bold tracking-tight">LinguaGua <span class="text-emerald-500">Design</span></span>
+            <img src="assets/images/illustration/mascot.png" alt="LinguaGua" class="w-10 h-10 object-contain" onerror="this.src='https://via.placeholder.com/40?text=L'">
+            <span class="text-xl font-bold tracking-tight">LinguaGua <span class="text-emerald-500 font-medium">设计规范手册</span></span>
         </div>
 
-        <!-- 视图切换按钮 - 右对齐 -->
         <nav class="flex h-full gap-8 ml-auto">
             <button onclick="switchPage('brand')" id="btn-brand" class="top-nav-btn h-full px-4 text-sm font-medium transition-all hover:text-emerald-600 top-nav-active">
                 品牌规范
@@ -53,20 +52,18 @@
     </header>
 
     <div class="flex pt-16 min-h-screen">
-        <!-- 左侧导航栏 - 显示所有内容 -->
+        <!-- 左侧导航栏 -->
         <aside class="w-64 bg-white border-r border-gray-200 fixed h-[calc(100vh-64px)] overflow-y-auto custom-scrollbar">
             <nav class="p-4 space-y-6">
-                <!-- 品牌侧边栏部分 -->
                 <div>
                     <div class="px-3 py-2 text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">品牌规范</div>
                     <div class="space-y-1">
                         <a href="#logo" onclick="switchPage('brand')" class="nav-link block px-4 py-2.5 text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all">Logo</a>
+                        <a href="#typo-brand" onclick="switchPage('brand')" class="nav-link block px-4 py-2.5 text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all">字体</a>
                         <a href="#ip-image" onclick="switchPage('brand')" class="nav-link block px-4 py-2.5 text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all">IP形象</a>
-                        <a href="#typo-brand" onclick="switchPage('brand')" class="nav-link block px-4 py-2.5 text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all">字体规范</a>
                     </div>
                 </div>
 
-                <!-- 设计侧边栏部分 -->
                 <div>
                     <div class="px-3 py-2 text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">设计规范</div>
                     <div class="space-y-1">
@@ -84,199 +81,202 @@
             
             <!-- 视图：品牌规范 -->
             <div id="page-brand">
-                <!-- Logo 章节 -->
                 <section id="logo" class="mb-20">
-                    <div class="flex items-center gap-4 mb-6">
-                        <h1 class="text-4xl font-bold">Logo</h1>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full uppercase tracking-widest">Identity</span>
-                    </div>
-                    <p class="text-gray-500 mb-10 leading-relaxed text-lg max-w-3xl">
-                        LinguaGua 的 Logo 结合了现代感与亲和力，通过色彩的跃动传递学习的乐趣。
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm flex flex-col items-center">
-                            <div class="w-32 h-32 mb-6 rounded-2xl shadow-lg overflow-hidden border border-gray-50">
-                                <img src="assets/images/logo/app-logo-square.png" alt="App Logo" class="w-full h-full object-cover">
+                    <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">Logo</h1></div>
+                    <div class="bg-white rounded-[32px] border border-gray-100 shadow-sm overflow-hidden">
+                        <div class="grid grid-cols-1 lg:grid-cols-12">
+                            <div class="lg:col-span-4 p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-gray-50 flex flex-col gap-12 items-center justify-center bg-gray-50/30">
+                                <div class="text-center group">
+                                    <div class="w-40 h-40 mb-4 rounded-[32px] shadow-xl overflow-hidden border border-white bg-white transition-transform duration-500 group-hover:scale-105">
+                                        <img src="assets/images/logo/app-logo-square.png" alt="App Logo" class="w-full h-full object-cover">
+                                    </div>
+                                    <p class="font-bold text-gray-800">App Icon</p>
+                                    <p class="text-[10px] text-gray-400 mt-1 uppercase tracking-wider">正方形图标变体</p>
+                                </div>
+                                <div class="text-center group">
+                                    <div class="w-40 h-40 mb-4 rounded-full shadow-xl overflow-hidden border border-white bg-white transition-transform duration-500 group-hover:scale-105">
+                                        <img src="assets/images/logo/social-media.png" alt="Social Avatar" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/160?text=Social+Media'">
+                                    </div>
+                                    <p class="font-bold text-gray-800">社交媒体头像</p>
+                                    <p class="text-[10px] text-gray-400 mt-1 uppercase tracking-wider">圆形图标变体</p>
+                                </div>
                             </div>
-                            <p class="font-bold text-gray-800">App Icon</p>
-                        </div>
-                        <div class="md:col-span-2 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
-                            <p class="font-bold text-gray-800 mb-6 text-center">多色 Logo 方案</p>
-                            <div class="grid grid-cols-2 gap-6 text-center">
-                                <div class="p-4 bg-gray-50 rounded-2xl"><img src="assets/images/logo/logo-bluegreen.png" class="h-10 mx-auto mb-2"><span class="text-[10px] text-gray-400">Blue-Green</span></div>
-                                <div class="p-4 bg-gray-50 rounded-2xl"><img src="assets/images/logo/logo-lavender.png" class="h-10 mx-auto mb-2"><span class="text-[10px] text-gray-400">Lavender</span></div>
-                                <div class="p-4 bg-gray-50 rounded-2xl"><img src="assets/images/logo/logo-yellowgreen1.png" class="h-10 mx-auto mb-2"><span class="text-[10px] text-gray-400">Yellow-Green 1</span></div>
-                                <div class="p-4 bg-gray-50 rounded-2xl"><img src="assets/images/logo/logo-yellowgreen2.png" class="h-10 mx-auto mb-2"><span class="text-[10px] text-gray-400">Yellow-Green 2</span></div>
+                            <div class="lg:col-span-8 p-8 lg:p-12 flex items-center">
+                                <div class="grid grid-cols-2 gap-8 w-full">
+                                    <div class="group p-8 bg-gray-50 rounded-3xl flex flex-col items-center justify-center min-h-[200px] transition-all hover:bg-emerald-50/50">
+                                        <img src="assets/images/logo/logo-bluegreen.png" class="h-16 mx-auto mb-4 object-contain drop-shadow-sm group-hover:scale-110 transition-transform">
+                                        <span class="text-[10px] text-gray-400 font-mono tracking-widest uppercase">Blue-Green</span>
+                                    </div>
+                                    <div class="group p-8 bg-gray-50 rounded-3xl flex flex-col items-center justify-center min-h-[200px] transition-all hover:bg-purple-50/50">
+                                        <img src="assets/images/logo/logo-lavender.png" class="h-16 mx-auto mb-4 object-contain drop-shadow-sm group-hover:scale-110 transition-transform">
+                                        <span class="text-[10px] text-gray-400 font-mono tracking-widest uppercase">Lavender</span>
+                                    </div>
+                                    <div class="group p-8 bg-gray-50 rounded-3xl flex flex-col items-center justify-center min-h-[200px] transition-all hover:bg-emerald-50/50">
+                                        <img src="assets/images/logo/logo-yellowgreen1.png" class="h-16 mx-auto mb-4 object-contain drop-shadow-sm group-hover:scale-110 transition-transform">
+                                        <span class="text-[10px] text-gray-400 font-mono tracking-widest uppercase">Yellow-Green V1</span>
+                                    </div>
+                                    <div class="group p-8 bg-gray-50 rounded-3xl flex flex-col items-center justify-center min-h-[200px] transition-all hover:bg-emerald-50/50">
+                                        <img src="assets/images/logo/logo-yellowgreen2.png" class="h-16 mx-auto mb-4 object-contain drop-shadow-sm group-hover:scale-110 transition-transform">
+                                        <span class="text-[10px] text-gray-400 font-mono tracking-widest uppercase">Yellow-Green V2</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- IP形象 -->
-                <section id="ip-image" class="mb-20">
-                    <div class="flex items-center gap-4 mb-6">
-                        <h1 class="text-4xl font-bold">IP 形象</h1>
-                        <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full uppercase tracking-widest">Mascot</span>
+                <section id="typo-brand" class="mb-20">
+                    <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">字体</h1></div>
+                    <div class="bg-white p-8 rounded-[32px] border border-gray-100 shadow-sm">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                            <div class="flex flex-col items-center justify-center min-h-[140px]">
+                                <p class="text-6xl font-bold text-[#39B067] tracking-tight">LinguaGua</p>
+                            </div>
+                            <div class="flex flex-col justify-center h-full p-4">
+                                <p class="text-sm text-emerald-600 font-mono font-bold tracking-wide">字体类型: Poppins-Bold</p>
+                                <p class="text-sm text-emerald-600 font-mono font-bold tracking-wide">品牌色值: #39B067</p>
+                                <p class="text-xs text-gray-500 mt-4 leading-relaxed border-t border-gray-100 pt-4">
+                                    核心品牌色，需保持视觉一致性。在应用 Logo 时，请确保主体背景为纯白或透明，以维持品牌形象的专业感与清晰度。
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    
+                </section>
+
+                <section id="ip-image" class="mb-20">
+                    <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">IP 形象</h1></div>
                     <div class="bg-white rounded-[32px] border border-gray-200/60 shadow-sm overflow-hidden">
-                        <div class="p-8 lg:p-12 border-b border-gray-100">
+                        <div class="p-8 lg:p-12 border-b border-gray-100 bg-white text-center">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                                 <div class="flex flex-col items-center">
                                     <div class="w-full aspect-square max-w-[280px] mb-6 flex items-center justify-center bg-gray-50 rounded-2xl p-4">
-                                        <img src="assets/images/illustration/mascot.svg" alt="Mascot" class="max-w-full max-h-full drop-shadow-2xl">
+                                        <img src="assets/images/illustration/mascot.svg" alt="Mascot" class="max-w-full max-h-full drop-shadow-2xl" onerror="this.parentElement.innerHTML='<div class=\'w-32 h-32 bg-emerald-500 rounded-full flex items-center justify-center text-white text-6xl font-bold shadow-lg\'>G</div>'">
                                     </div>
                                     <h3 class="text-lg font-bold text-gray-800">主形象 (正面)</h3>
                                 </div>
                                 <div class="flex flex-col items-center opacity-40">
-                                    <div class="w-full aspect-square max-w-[280px] mb-6 flex items-center justify-center bg-gray-50 rounded-2xl border border-dashed border-gray-200 p-8">
-                                        <svg class="w-16 h-16 text-gray-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    <div class="w-full aspect-square max-w-[280px] mb-6 flex items-center justify-center bg-gray-50 rounded-2xl border border-dashed border-gray-200 p-8 text-gray-300">
+                                        <svg class="w-16 h-16 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                                     </div>
-                                    <h3 class="text-lg font-bold">侧面形象</h3>
+                                    <h3 class="text-lg font-bold text-gray-400">侧面形象</h3>
                                 </div>
                             </div>
                         </div>
-                        <div class="p-8 lg:p-12 bg-gray-50/30">
-                            <h3 class="text-xl font-bold mb-8 flex items-center gap-2"><div class="w-1.5 h-6 bg-emerald-500 rounded-full"></div>IP 专属颜色系统</h3>
-                            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center">
-                                <div><div class="h-16 bg-[#88E744] rounded-xl mb-2 shadow-sm"></div><p class="text-[10px] font-bold">鲜绿色</p><p class="text-[9px] text-gray-400 font-mono">#88E744</p></div>
-                                <div><div class="h-16 bg-[#16C45B] rounded-xl mb-2 shadow-sm"></div><p class="text-[10px] font-bold">亮绿色</p><p class="text-[9px] text-gray-400 font-mono">#16C45B</p></div>
-                                <div><div class="h-16 bg-[#0B8451] rounded-xl mb-2 shadow-sm"></div><p class="text-[10px] font-bold">深绿色</p><p class="text-[9px] text-gray-400 font-mono">#0B8451</p></div>
-                                <div><div class="h-16 bg-[#E76F12] rounded-xl mb-2 shadow-sm"></div><p class="text-[10px] font-bold">深橙色</p><p class="text-[9px] text-gray-400 font-mono">#E76F12</p></div>
-                                <div><div class="h-16 bg-[#F7A60C] rounded-xl mb-2 shadow-sm"></div><p class="text-[10px] font-bold">浅橙色</p><p class="text-[9px] text-gray-400 font-mono">#F7A60C</p></div>
-                                <div><div class="h-16 bg-[#000000] rounded-xl mb-2 shadow-sm"></div><p class="text-[10px] font-bold">纯黑色</p><p class="text-[9px] text-gray-400 font-mono">#000000</p></div>
+                        <div class="p-8 lg:p-12 bg-white">
+                            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center">
+                                <div><div class="h-16 bg-[#88E744] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">鲜绿色</p><p class="text-[9px] text-gray-400 font-mono">#88E744</p></div>
+                                <div><div class="h-16 bg-[#16C45B] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">亮绿色</p><p class="text-[9px] text-gray-400 font-mono">#16C45B</p></div>
+                                <div><div class="h-16 bg-[#0B8451] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">深绿色</p><p class="text-[9px] text-gray-400 font-mono">#0B8451</p></div>
+                                <div><div class="h-16 bg-[#E76F12] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">深橙色</p><p class="text-[9px] text-gray-400 font-mono">#E76F12</p></div>
+                                <div><div class="h-16 bg-[#F7A60C] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">浅橙色</p><p class="text-[9px] text-gray-400 font-mono">#F7A60C</p></div>
+                                <div><div class="h-16 bg-[#000000] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">纯黑色</p><p class="text-[9px] text-gray-400 font-mono">#000000</p></div>
+                                <div><div class="h-16 bg-[#F1F8F1] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">浅灰白色</p><p class="text-[9px] text-gray-400 font-mono">#F1F8F1</p></div>
+                                <div><div class="h-16 bg-[#24150E] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">深棕黑色</p><p class="text-[9px] text-gray-400 font-mono">#24150E</p></div>
+                                <div><div class="h-16 bg-[#C2C72C] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">橄榄黄绿色</p><p class="text-[9px] text-gray-400 font-mono">#C2C72C</p></div>
                             </div>
                         </div>
                     </div>
-                </section>
-
-                <!-- 字体规范品牌 -->
-                <section id="typo-brand" class="mb-20">
-                    <h2 class="text-3xl font-bold mb-6">字体规范 (品牌)</h2>
-                    <div class="bg-white p-12 rounded-3xl border border-gray-100 text-center text-gray-400 italic">品牌字体资源建设中...</div>
                 </section>
             </div>
 
             <!-- 视图：设计规范 -->
             <div id="page-design" class="hidden">
-                <!-- 颜色系统 -->
                 <section id="color-system" class="mb-20">
-                    <h2 class="text-4xl font-bold mb-6">全局颜色系统</h2>
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
-                            <div class="h-24 bg-emerald-500 rounded-xl mb-3 shadow-inner"></div>
-                            <p class="font-bold text-sm">Primary Green</p>
-                            <p class="text-xs text-gray-400 font-mono">#10B981</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
-                            <div class="h-24 bg-blue-500 rounded-xl mb-3 shadow-inner"></div>
-                            <p class="font-bold text-sm">Link Blue</p>
-                            <p class="text-xs text-gray-400 font-mono">#3B82F6</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
-                            <div class="h-24 bg-purple-500 rounded-xl mb-3 shadow-inner"></div>
-                            <p class="font-bold text-sm">Accent Purple</p>
-                            <p class="text-xs text-gray-400 font-mono">#8B5CF6</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm">
-                            <div class="h-24 bg-gray-900 rounded-xl mb-3 shadow-inner"></div>
-                            <p class="font-bold text-sm">Neutral Black</p>
-                            <p class="text-xs text-gray-400 font-mono">#111827</p>
+                    <!-- 修改：标题级别提升为 h1，与其他页面章节对齐 -->
+                    <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">颜色系统</h1></div>
+                    
+                    <!-- 修改：调整色块列表样式，与 IP 形象的色块规范统一 -->
+                    <div class="bg-white p-8 lg:p-12 rounded-[32px] border border-gray-100 shadow-sm">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+                            <div class="group">
+                                <div class="h-24 bg-emerald-500 rounded-2xl mb-3 shadow-sm border border-gray-50 group-hover:scale-105 transition-transform"></div>
+                                <p class="font-bold text-sm text-emerald-600">Primary Green</p>
+                                <p class="text-xs text-gray-400 font-mono">#10B981</p>
+                            </div>
+                            <div class="group">
+                                <div class="h-24 bg-blue-500 rounded-2xl mb-3 shadow-sm border border-gray-50 group-hover:scale-105 transition-transform"></div>
+                                <p class="font-bold text-sm text-blue-600">Link Blue</p>
+                                <p class="text-xs text-gray-400 font-mono">#3B82F6</p>
+                            </div>
+                            <div class="group">
+                                <div class="h-24 bg-purple-500 rounded-2xl mb-3 shadow-sm border border-gray-50 group-hover:scale-105 transition-transform"></div>
+                                <p class="font-bold text-sm text-purple-600">Accent Purple</p>
+                                <p class="text-xs text-gray-400 font-mono">#8B5CF6</p>
+                            </div>
+                            <div class="group">
+                                <div class="h-24 bg-gray-900 rounded-2xl mb-3 shadow-sm border border-gray-50 group-hover:scale-105 transition-transform"></div>
+                                <p class="font-bold text-sm text-gray-900">Neutral Black</p>
+                                <p class="text-xs text-gray-400 font-mono">#111827</p>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- 插画 -->
                 <section id="illustration" class="mb-20">
-                    <h2 class="text-3xl font-bold mb-6">插画规范</h2>
-                    <div class="bg-white p-12 rounded-3xl border border-gray-100 text-center text-gray-400 italic">UI 插画库资源更新中...</div>
+                    <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">插画库</h1></div>
+                    <div class="bg-white p-12 rounded-[32px] border border-gray-100 text-center text-gray-400 italic shadow-sm">插画资源更新中...</div>
                 </section>
 
-                <!-- 按钮 -->
                 <section id="buttons" class="mb-20">
-                    <h2 class="text-3xl font-bold mb-6">按钮组件</h2>
-                    <div class="bg-white p-10 border border-gray-200 rounded-[32px] shadow-sm">
-                        <div class="flex flex-wrap gap-6 items-center">
-                            <button class="px-8 py-3 bg-emerald-500 text-white font-bold rounded-xl hover:bg-emerald-600 transition-all shadow-lg shadow-emerald-200">主要按钮</button>
-                            <button class="px-8 py-3 bg-white border-2 border-gray-200 text-gray-700 font-bold rounded-xl hover:bg-gray-50 transition-all">次要按钮</button>
-                            <button class="px-8 py-3 text-emerald-600 font-bold hover:bg-emerald-50 rounded-xl transition-all">文字链接</button>
-                        </div>
+                    <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">按钮组件</h1></div>
+                    <div class="bg-white p-12 border border-gray-100 rounded-[32px] shadow-sm flex flex-wrap gap-6 items-center justify-center">
+                        <button class="px-8 py-3 bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-200 hover:bg-emerald-600 transition-colors">主要按钮</button>
+                        <button class="px-8 py-3 bg-white border-2 border-gray-200 text-gray-700 font-bold rounded-xl hover:bg-gray-50 transition-colors">次要按钮</button>
                     </div>
                 </section>
 
-                <!-- 字体 -->
                 <section id="typo-design" class="mb-20">
-                    <h2 class="text-3xl font-bold mb-6">字体规范 (UI)</h2>
-                    <div class="bg-white p-12 rounded-3xl border border-gray-100 space-y-4">
-                        <div class="border-b border-gray-50 pb-4">
-                            <p class="text-4xl font-bold mb-1">Headline 1</p>
-                            <p class="text-xs text-gray-400 font-mono">36px / Bold</p>
-                        </div>
-                        <div class="border-b border-gray-50 pb-4">
-                            <p class="text-2xl font-bold mb-1">Headline 2</p>
-                            <p class="text-xs text-gray-400 font-mono">24px / Bold</p>
-                        </div>
+                    <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">UI 字体</h1></div>
+                    <div class="bg-white p-12 rounded-[32px] border border-gray-100 space-y-8 shadow-sm">
+                        <div class="border-b border-gray-50 pb-6"><p class="text-4xl font-bold">Headline 1 - 36px</p></div>
+                        <div class="border-b border-gray-50 pb-6"><p class="text-2xl font-bold">Headline 2 - 24px</p></div>
+                        <p class="text-base text-gray-600 leading-relaxed">Body Text - 16px. 这是一个标准的正文段落展示，用于验证排版与行高。LinguaGua 的字体系统旨在平衡阅读的愉悦性与信息的传递效率。</p>
                     </div>
                 </section>
             </div>
-
         </main>
     </div>
 
     <script>
-        // 页面切换逻辑
         function switchPage(pageId, targetId = null) {
-            // 切换顶部按钮状态
             document.querySelectorAll('.top-nav-btn').forEach(btn => {
                 btn.classList.remove('top-nav-active', 'text-emerald-600');
                 btn.classList.add('text-gray-500');
             });
             
             const activeBtn = document.getElementById('btn-' + pageId);
-            activeBtn.classList.add('top-nav-active', 'text-emerald-600');
-            activeBtn.classList.remove('text-gray-500');
+            if (activeBtn) {
+                activeBtn.classList.add('top-nav-active', 'text-emerald-600');
+                activeBtn.classList.remove('text-gray-500');
+            }
 
-            // 切换内容显隐
-            const pageBrand = document.getElementById('page-brand');
-            const pageDesign = document.getElementById('page-design');
-            
-            pageBrand.classList.toggle('hidden', pageId !== 'brand');
-            pageDesign.classList.toggle('hidden', pageId !== 'design');
+            document.getElementById('page-brand').classList.toggle('hidden', pageId !== 'brand');
+            document.getElementById('page-design').classList.toggle('hidden', pageId !== 'design');
 
-            // 如果是点击侧边栏进行的跨页跳转，且有 targetId，延迟滚动以确保元素已渲染
             if (targetId) {
                 setTimeout(() => {
                     const element = document.querySelector(targetId);
                     if (element) {
-                        const top = element.offsetTop - 80;
-                        window.scrollTo({ top, behavior: 'smooth' });
+                        window.scrollTo({ top: element.offsetTop - 80, behavior: 'smooth' });
                     }
-                }, 10);
+                }, 50);
             }
-            
             updateActiveLink();
         }
 
-        // 侧边栏高亮逻辑
-        const navLinks = document.querySelectorAll('.nav-link');
-        
         function updateActiveLink() {
             let current = '';
-            // 仅在当前可见的页面内查找 Section
             const visiblePage = document.querySelector('main > div:not(.hidden)');
             if (!visiblePage) return;
 
             const sections = visiblePage.querySelectorAll('section');
-            
             sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= (sectionTop - 150)) {
+                if (window.pageYOffset >= (section.offsetTop - 150)) {
                     current = section.getAttribute('id');
                 }
             });
 
-            navLinks.forEach(link => {
+            document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('nav-active');
                 if (link.getAttribute('href').includes(current)) {
                     link.classList.add('nav-active');
@@ -286,16 +286,12 @@
 
         window.addEventListener('scroll', updateActiveLink);
 
-        // 处理初始加载时的锚点定位
         window.onload = () => {
             const hash = window.location.hash;
-            if (hash) {
-                // 检查该锚点属于哪个页面
-                if (['#color-system', '#illustration', '#buttons', '#typo-design'].includes(hash)) {
-                    switchPage('design', hash);
-                } else {
-                    switchPage('brand', hash);
-                }
+            if (hash && ['#color-system', '#illustration', '#buttons', '#typo-design'].includes(hash)) {
+                switchPage('design', hash);
+            } else {
+                switchPage('brand', hash || null);
             }
         };
     </script>

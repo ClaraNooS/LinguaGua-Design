@@ -77,102 +77,104 @@
         </aside>
 
         <!-- 主内容区 -->
-        <main class="flex-1 ml-64 p-8 lg:p-16 max-w-6xl">
+        <main class="flex-1 ml-64 p-8 lg:p-16 w-full max-w-[1600px]">
             
             <!-- 视图：品牌规范 -->
             <div id="page-brand">
+                <!-- Logo 章节 -->
                 <section id="logo" class="mb-20">
                     <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">Logo</h1></div>
+                    
+                    <!-- 整合大容器 -->
                     <div class="bg-white rounded-[32px] border border-gray-100 shadow-sm overflow-hidden">
-                        <div class="grid grid-cols-1 lg:grid-cols-12">
-                            <div class="lg:col-span-4 p-8 lg:p-12 border-b lg:border-b-0 lg:border-r border-gray-50 flex flex-col gap-12 items-center justify-center bg-gray-50/30">
-                                <div class="text-center group">
-                                    <div class="w-40 h-40 mb-4 rounded-[32px] shadow-xl overflow-hidden border border-white bg-white transition-transform duration-500 group-hover:scale-105">
-                                        <img src="assets/images/logo/app-logo-square.png" alt="App Logo" class="w-full h-full object-cover">
-                                    </div>
-                                    <p class="font-bold text-gray-800">App Icon</p>
-                                    <p class="text-[10px] text-gray-400 mt-1 uppercase tracking-wider">正方形图标变体</p>
-                                </div>
-                                <div class="text-center group">
-                                    <div class="w-40 h-40 mb-4 rounded-full shadow-xl overflow-hidden border border-white bg-white transition-transform duration-500 group-hover:scale-105">
-                                        <img src="assets/images/logo/social-media.png" alt="Social Avatar" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/160?text=Social+Media'">
-                                    </div>
-                                    <p class="font-bold text-gray-800">社交媒体头像</p>
-                                    <p class="text-[10px] text-gray-400 mt-1 uppercase tracking-wider">圆形图标变体</p>
+                        
+                        <!-- 上部：核心图标并排 (App Logo & 社交头像) - 背景已改为白色 -->
+                        <div class="p-12 lg:p-16 flex flex-wrap justify-center gap-12 lg:gap-32 items-center bg-white border-b border-gray-50">
+                            <!-- App 图标 -->
+                            <div class="text-center group">
+                                <div class="w-48 h-48 mb-4 rounded-[44px] shadow-xl overflow-hidden border-2 border-gray-50 bg-white transition-transform duration-500 group-hover:scale-105">
+                                    <img src="assets/images/logo/app-logo-square.png" alt="App Logo" class="w-full h-full object-cover">
                                 </div>
                             </div>
-                            <div class="lg:col-span-8 p-8 lg:p-12 flex items-center">
-                                <div class="grid grid-cols-2 gap-8 w-full">
-                                    <div class="group p-8 bg-gray-50 rounded-3xl flex flex-col items-center justify-center min-h-[200px] transition-all hover:bg-emerald-50/50">
-                                        <img src="assets/images/logo/logo-bluegreen.png" class="h-16 mx-auto mb-4 object-contain drop-shadow-sm group-hover:scale-110 transition-transform">
-                                        <span class="text-[10px] text-gray-400 font-mono tracking-widest uppercase">Blue-Green</span>
-                                    </div>
-                                    <div class="group p-8 bg-gray-50 rounded-3xl flex flex-col items-center justify-center min-h-[200px] transition-all hover:bg-purple-50/50">
-                                        <img src="assets/images/logo/logo-lavender.png" class="h-16 mx-auto mb-4 object-contain drop-shadow-sm group-hover:scale-110 transition-transform">
-                                        <span class="text-[10px] text-gray-400 font-mono tracking-widest uppercase">Lavender</span>
-                                    </div>
-                                    <div class="group p-8 bg-gray-50 rounded-3xl flex flex-col items-center justify-center min-h-[200px] transition-all hover:bg-emerald-50/50">
-                                        <img src="assets/images/logo/logo-yellowgreen1.png" class="h-16 mx-auto mb-4 object-contain drop-shadow-sm group-hover:scale-110 transition-transform">
-                                        <span class="text-[10px] text-gray-400 font-mono tracking-widest uppercase">Yellow-Green V1</span>
-                                    </div>
-                                    <div class="group p-8 bg-gray-50 rounded-3xl flex flex-col items-center justify-center min-h-[200px] transition-all hover:bg-emerald-50/50">
-                                        <img src="assets/images/logo/logo-yellowgreen2.png" class="h-16 mx-auto mb-4 object-contain drop-shadow-sm group-hover:scale-110 transition-transform">
-                                        <span class="text-[10px] text-gray-400 font-mono tracking-widest uppercase">Yellow-Green V2</span>
-                                    </div>
+
+                            <!-- 社交媒体头像 -->
+                            <div class="text-center group">
+                                <div class="w-48 h-48 mb-4 rounded-full shadow-xl overflow-hidden border-2 border-gray-50 bg-white transition-transform duration-500 group-hover:scale-105">
+                                    <img src="assets/images/logo/social-media.png" alt="Social Avatar" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/192?text=Social+Media'">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 下部：2x2 变体展示 - 缩小间距，去掉文字，扩大图片空间 -->
+                        <div class="p-10 lg:p-12 bg-gray-50/20">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 max-w-6xl mx-auto">
+                                <div class="group p-8 bg-white border border-gray-100 rounded-[32px] flex items-center justify-center min-h-[260px] transition-all hover:shadow-md hover:border-emerald-100">
+                                    <img src="assets/images/logo/logo-bluegreen.png" class="h-28 lg:h-36 mx-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform">
+                                </div>
+                                <div class="group p-8 bg-white border border-gray-100 rounded-[32px] flex items-center justify-center min-h-[260px] transition-all hover:shadow-md hover:border-purple-100">
+                                    <img src="assets/images/logo/logo-lavender.png" class="h-28 lg:h-36 mx-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform">
+                                </div>
+                                <div class="group p-8 bg-white border border-gray-100 rounded-[32px] flex items-center justify-center min-h-[260px] transition-all hover:shadow-md hover:border-emerald-100">
+                                    <img src="assets/images/logo/logo-yellowgreen1.png" class="h-28 lg:h-36 mx-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform">
+                                </div>
+                                <div class="group p-8 bg-white border border-gray-100 rounded-[32px] flex items-center justify-center min-h-[260px] transition-all hover:shadow-md hover:border-emerald-100">
+                                    <img src="assets/images/logo/logo-yellowgreen2.png" class="h-28 lg:h-36 mx-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
+                <!-- 字体规范 -->
                 <section id="typo-brand" class="mb-20">
                     <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">字体</h1></div>
-                    <div class="bg-white p-8 rounded-[32px] border border-gray-100 shadow-sm">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="bg-white p-8 lg:p-12 rounded-[32px] border border-gray-100 shadow-sm">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
                             <div class="flex flex-col items-center justify-center min-h-[140px]">
-                                <p class="text-6xl font-bold text-[#39B067] tracking-tight">LinguaGua</p>
+                                <p class="text-7xl xl:text-8xl font-bold text-[#39B067] tracking-tight">LinguaGua</p>
                             </div>
-                            <div class="flex flex-col justify-center h-full p-4">
-                                <p class="text-sm text-emerald-600 font-mono font-bold tracking-wide">字体类型: Poppins-Bold</p>
-                                <p class="text-sm text-emerald-600 font-mono font-bold tracking-wide">品牌色值: #39B067</p>
-                                <p class="text-xs text-gray-500 mt-4 leading-relaxed border-t border-gray-100 pt-4">
-                                    核心品牌色，需保持视觉一致性。在应用 Logo 时，请确保主体背景为纯白或透明，以维持品牌形象的专业感与清晰度。
-                                </p>
+                            <div class="flex flex-col justify-center h-full">
+                                <div class="space-y-4 max-w-xl">
+                                    <p class="text-sm text-emerald-600 font-mono font-bold tracking-wide">字体类型: Poppins-Bold</p>
+                                    <p class="text-sm text-emerald-600 font-mono font-bold tracking-wide">品牌色值: #39B067</p>
+                                    <p class="text-sm text-gray-500 mt-4 leading-relaxed border-t border-gray-100 pt-6">
+                                        核心品牌色，需保持视觉一致性。在应用 Logo 时，请确保主体背景为纯白或透明。
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
+                <!-- IP形象 -->
                 <section id="ip-image" class="mb-20">
                     <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">IP 形象</h1></div>
-                    <div class="bg-white rounded-[32px] border border-gray-200/60 shadow-sm overflow-hidden">
-                        <div class="p-8 lg:p-12 border-b border-gray-100 bg-white text-center">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="bg-white rounded-[32px] border border-gray-200/60 shadow-sm overflow-hidden text-center">
+                        <div class="p-8 lg:p-16 border-b border-gray-100 bg-white">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
                                 <div class="flex flex-col items-center">
-                                    <div class="w-full aspect-square max-w-[280px] mb-6 flex items-center justify-center bg-gray-50 rounded-2xl p-4">
-                                        <img src="assets/images/illustration/mascot.svg" alt="Mascot" class="max-w-full max-h-full drop-shadow-2xl" onerror="this.parentElement.innerHTML='<div class=\'w-32 h-32 bg-emerald-500 rounded-full flex items-center justify-center text-white text-6xl font-bold shadow-lg\'>G</div>'">
+                                    <div class="w-full aspect-square max-w-[320px] mb-8 flex items-center justify-center bg-gray-50 rounded-[40px] p-6 text-emerald-500">
+                                        <img src="assets/images/illustration/mascot.svg" alt="Mascot" class="max-w-full max-h-full drop-shadow-2xl" onerror="this.parentElement.innerHTML='<div class=\'text-8xl font-bold\'>G</div>'">
                                     </div>
-                                    <h3 class="text-lg font-bold text-gray-800">主形象 (正面)</h3>
                                 </div>
                                 <div class="flex flex-col items-center opacity-40">
-                                    <div class="w-full aspect-square max-w-[280px] mb-6 flex items-center justify-center bg-gray-50 rounded-2xl border border-dashed border-gray-200 p-8 text-gray-300">
-                                        <svg class="w-16 h-16 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    <div class="w-full aspect-square max-w-[320px] mb-8 flex items-center justify-center bg-gray-50 rounded-[40px] border border-dashed border-gray-200 p-8 text-gray-300">
+                                        <svg class="w-20 h-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                                     </div>
-                                    <h3 class="text-lg font-bold text-gray-400">侧面形象</h3>
                                 </div>
                             </div>
                         </div>
                         <div class="p-8 lg:p-12 bg-white">
-                            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center">
-                                <div><div class="h-16 bg-[#88E744] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">鲜绿色</p><p class="text-[9px] text-gray-400 font-mono">#88E744</p></div>
-                                <div><div class="h-16 bg-[#16C45B] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">亮绿色</p><p class="text-[9px] text-gray-400 font-mono">#16C45B</p></div>
-                                <div><div class="h-16 bg-[#0B8451] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">深绿色</p><p class="text-[9px] text-gray-400 font-mono">#0B8451</p></div>
-                                <div><div class="h-16 bg-[#E76F12] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">深橙色</p><p class="text-[9px] text-gray-400 font-mono">#E76F12</p></div>
-                                <div><div class="h-16 bg-[#F7A60C] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">浅橙色</p><p class="text-[9px] text-gray-400 font-mono">#F7A60C</p></div>
-                                <div><div class="h-16 bg-[#000000] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">纯黑色</p><p class="text-[9px] text-gray-400 font-mono">#000000</p></div>
-                                <div><div class="h-16 bg-[#F1F8F1] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">浅灰白色</p><p class="text-[9px] text-gray-400 font-mono">#F1F8F1</p></div>
-                                <div><div class="h-16 bg-[#24150E] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">深棕黑色</p><p class="text-[9px] text-gray-400 font-mono">#24150E</p></div>
-                                <div><div class="h-16 bg-[#C2C72C] rounded-xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">橄榄黄绿色</p><p class="text-[9px] text-gray-400 font-mono">#C2C72C</p></div>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-9 gap-6 text-center">
+                                <div><div class="h-20 bg-[#88E744] rounded-2xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">鲜绿色</p><p class="text-[9px] text-gray-400 font-mono">#88E744</p></div>
+                                <div><div class="h-20 bg-[#16C45B] rounded-2xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">亮绿色</p><p class="text-[9px] text-gray-400 font-mono">#16C45B</p></div>
+                                <div><div class="h-20 bg-[#0B8451] rounded-2xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">深绿色</p><p class="text-[9px] text-gray-400 font-mono">#0B8451</p></div>
+                                <div><div class="h-20 bg-[#E76F12] rounded-2xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">深橙色</p><p class="text-[9px] text-gray-400 font-mono">#E76F12</p></div>
+                                <div><div class="h-20 bg-[#F7A60C] rounded-2xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">浅橙色</p><p class="text-[9px] text-gray-400 font-mono">#F7A60C</p></div>
+                                <div><div class="h-20 bg-[#000000] rounded-2xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">纯黑色</p><p class="text-[9px] text-gray-400 font-mono">#000000</p></div>
+                                <div><div class="h-20 bg-[#F1F8F1] rounded-2xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">浅灰白色</p><p class="text-[9px] text-gray-400 font-mono">#F1F8F1</p></div>
+                                <div><div class="h-20 bg-[#24150E] rounded-2xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">深棕黑色</p><p class="text-[9px] text-gray-400 font-mono">#24150E</p></div>
+                                <div><div class="h-20 bg-[#C2C72C] rounded-2xl mb-2 shadow-sm border border-gray-50"></div><p class="text-[10px] font-bold">橄榄黄绿色</p><p class="text-[9px] text-gray-400 font-mono">#C2C72C</p></div>
                             </div>
                         </div>
                     </div>
@@ -182,31 +184,28 @@
             <!-- 视图：设计规范 -->
             <div id="page-design" class="hidden">
                 <section id="color-system" class="mb-20">
-                    <!-- 修改：标题级别提升为 h1，与其他页面章节对齐 -->
                     <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">颜色系统</h1></div>
-                    
-                    <!-- 修改：调整色块列表样式，与 IP 形象的色块规范统一 -->
-                    <div class="bg-white p-8 lg:p-12 rounded-[32px] border border-gray-100 shadow-sm">
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+                    <div class="bg-white p-8 lg:p-16 rounded-[32px] border border-gray-100 shadow-sm">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-16 text-center">
                             <div class="group">
-                                <div class="h-24 bg-emerald-500 rounded-2xl mb-3 shadow-sm border border-gray-50 group-hover:scale-105 transition-transform"></div>
-                                <p class="font-bold text-sm text-emerald-600">Primary Green</p>
-                                <p class="text-xs text-gray-400 font-mono">#10B981</p>
+                                <div class="h-32 bg-emerald-500 rounded-3xl mb-4 shadow-sm border border-gray-50 group-hover:scale-105 transition-transform"></div>
+                                <p class="font-bold text-base text-emerald-600">Primary Green</p>
+                                <p class="text-sm text-gray-400 font-mono">#10B981</p>
                             </div>
                             <div class="group">
-                                <div class="h-24 bg-blue-500 rounded-2xl mb-3 shadow-sm border border-gray-50 group-hover:scale-105 transition-transform"></div>
-                                <p class="font-bold text-sm text-blue-600">Link Blue</p>
-                                <p class="text-xs text-gray-400 font-mono">#3B82F6</p>
+                                <div class="h-32 bg-blue-500 rounded-3xl mb-4 shadow-sm border border-gray-50 group-hover:scale-105 transition-transform"></div>
+                                <p class="font-bold text-base text-blue-600">Link Blue</p>
+                                <p class="text-sm text-gray-400 font-mono">#3B82F6</p>
                             </div>
                             <div class="group">
-                                <div class="h-24 bg-purple-500 rounded-2xl mb-3 shadow-sm border border-gray-50 group-hover:scale-105 transition-transform"></div>
-                                <p class="font-bold text-sm text-purple-600">Accent Purple</p>
-                                <p class="text-xs text-gray-400 font-mono">#8B5CF6</p>
+                                <div class="h-32 bg-purple-500 rounded-3xl mb-4 shadow-sm border border-gray-50 group-hover:scale-105 transition-transform"></div>
+                                <p class="font-bold text-base text-purple-600">Accent Purple</p>
+                                <p class="text-sm text-gray-400 font-mono">#8B5CF6</p>
                             </div>
                             <div class="group">
-                                <div class="h-24 bg-gray-900 rounded-2xl mb-3 shadow-sm border border-gray-50 group-hover:scale-105 transition-transform"></div>
-                                <p class="font-bold text-sm text-gray-900">Neutral Black</p>
-                                <p class="text-xs text-gray-400 font-mono">#111827</p>
+                                <div class="h-32 bg-gray-900 rounded-3xl mb-4 shadow-sm border border-gray-50 group-hover:scale-105 transition-transform"></div>
+                                <p class="font-bold text-base text-gray-900">Neutral Black</p>
+                                <p class="text-sm text-gray-400 font-mono">#111827</p>
                             </div>
                         </div>
                     </div>
@@ -214,23 +213,23 @@
 
                 <section id="illustration" class="mb-20">
                     <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">插画库</h1></div>
-                    <div class="bg-white p-12 rounded-[32px] border border-gray-100 text-center text-gray-400 italic shadow-sm">插画资源更新中...</div>
+                    <div class="bg-white p-20 rounded-[32px] border border-gray-100 text-center text-gray-400 italic shadow-sm">插画资源更新中...</div>
                 </section>
 
                 <section id="buttons" class="mb-20">
                     <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">按钮组件</h1></div>
-                    <div class="bg-white p-12 border border-gray-100 rounded-[32px] shadow-sm flex flex-wrap gap-6 items-center justify-center">
-                        <button class="px-8 py-3 bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-200 hover:bg-emerald-600 transition-colors">主要按钮</button>
-                        <button class="px-8 py-3 bg-white border-2 border-gray-200 text-gray-700 font-bold rounded-xl hover:bg-gray-50 transition-colors">次要按钮</button>
+                    <div class="bg-white p-12 lg:p-20 border border-gray-100 rounded-[32px] shadow-sm flex flex-wrap gap-8 items-center justify-center">
+                        <button class="px-10 py-4 bg-emerald-500 text-white font-bold rounded-2xl shadow-lg shadow-emerald-200 hover:bg-emerald-600 transition-colors text-lg">主要按钮</button>
+                        <button class="px-10 py-4 bg-white border-2 border-gray-200 text-gray-700 font-bold rounded-2xl hover:bg-gray-50 transition-colors text-lg">次要按钮</button>
                     </div>
                 </section>
 
                 <section id="typo-design" class="mb-20">
                     <div class="mb-8"><h1 class="text-4xl font-bold text-gray-900">UI 字体</h1></div>
-                    <div class="bg-white p-12 rounded-[32px] border border-gray-100 space-y-8 shadow-sm">
-                        <div class="border-b border-gray-50 pb-6"><p class="text-4xl font-bold">Headline 1 - 36px</p></div>
-                        <div class="border-b border-gray-50 pb-6"><p class="text-2xl font-bold">Headline 2 - 24px</p></div>
-                        <p class="text-base text-gray-600 leading-relaxed">Body Text - 16px. 这是一个标准的正文段落展示，用于验证排版与行高。LinguaGua 的字体系统旨在平衡阅读的愉悦性与信息的传递效率。</p>
+                    <div class="bg-white p-12 lg:p-16 rounded-[32px] border border-gray-100 space-y-12 shadow-sm">
+                        <div class="border-b border-gray-50 pb-8"><p class="text-5xl font-bold">Headline 1 - 36px</p></div>
+                        <div class="border-b border-gray-50 pb-8"><p class="text-3xl font-bold">Headline 2 - 24px</p></div>
+                        <p class="text-lg text-gray-600 leading-relaxed max-w-4xl">Body Text - 16px. 这是一个标准的正文段落展示，用于验证排版与行高。LinguaGua 的字体系统旨在平衡阅读的愉悦性与信息的传递效率。</p>
                     </div>
                 </section>
             </div>

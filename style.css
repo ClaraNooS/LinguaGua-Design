@@ -1,0 +1,69 @@
+/* style.css */
+
+:root {
+    /* --- 核心品牌色 --- */
+    --lg-color-primary: #39B067;       /* 品牌青绿色 [cite: 3, 15] */
+    --lg-color-bg-light: #CDF0F1;     /* 官方背景淡色  */
+    
+    /* --- IP 形象：墨宝 (Moba) 扩展色 [cite: 45] --- */
+    --lg-color-moba-bright-green: #88E744;
+    --lg-color-moba-dark-green: #0B8451;
+    --lg-color-moba-orange: #F7A60C;
+    --lg-color-moba-black: #24150E;   /* 深棕黑色 */
+    
+    /* --- App 交互组件色 [cite: 48] --- */
+    --lg-color-btn-yellow: #F7D30C;   /* 学习天数按键 */
+    --lg-color-btn-green: #16C45B;    /* 完成课程按键 */
+
+    /* --- 辅助背景渐变 [cite: 54] --- */
+    --lg-gradient-start: #EFF297;
+    --lg-gradient-end: #9AE1BB;
+
+    /* --- 字体规范 [cite: 3, 11] --- */
+    --lg-font-main: 'Poppins', sans-serif;
+    --lg-font-weight-bold: 700;
+}
+
+/* 基础样式 */
+body {
+    margin: 0;
+    font-family: var(--lg-font-main);
+    color: var(--lg-color-moba-black);
+    display: flex;
+}
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: var(--lg-color-gray-light);
+    border-right: 1px solid #eee;
+    padding: 20px;
+    position: fixed;
+}
+
+.content {
+    margin-left: 280px;
+    padding: 60px;
+    max-width: 800px;
+}
+
+/* 颜色展示块样式 */
+.swatch-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.swatch {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}

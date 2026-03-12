@@ -1,80 +1,61 @@
 :root {
-  /* 核心品牌色 [cite: 3, 15] */
-  --lg-primary: #39B067;
-  --lg-bg-soft: #CDF0F1;
-  
-  /* 墨宝 (Moba) IP 色盘 [cite: 45] */
-  --moba-bright-green: #88E744;
-  --moba-dark-green: #0B8451;
-  --moba-orange: #F7A60C;
-  --moba-black: #24150E;  /* 深棕黑色 */
-  --moba-white: #F1F8F1;  /* 浅灰白色 */
-  
-  /* 交互组件色 [cite: 48] */
-  --btn-yellow: #F7D30C;
-  --btn-green: #16C45B;
-
-  /* 系统化参数 */
-  --radius-soft: 20px;    /* 对应 PDF 的“柔化圆角”  */
-  --font-main: 'Poppins', sans-serif;
+  --lg-primary: #39B067;       /* 品牌青绿色 [cite: 3, 15] */
+  --lg-bg-soft: #CDF0F1;      /* 官方背景色 [cite: 3] */
+  --moba-bright-green: #88E744; /* 亮绿色 [cite: 45] */
+  --moba-black: #24150E;      /* 深棕黑色 [cite: 45] */
+  --radius-lg: 24px;          /* 对应“圆润、柔化”定位 [cite: 9, 11] */
+  --sidebar-width: 280px;
 }
 
 body {
   margin: 0;
   display: flex;
-  background-color: #fff;
-  font-family: var(--font-main);
+  font-family: 'Poppins', sans-serif; /* 官方指定字体 [cite: 3] */
   color: var(--moba-black);
+  background-color: #fff;
 }
 
-/* 侧边栏：采用品牌背景色  */
+/* 侧边栏：修复固定定位 */
 .sidebar {
-  width: 280px;
+  width: var(--sidebar-width);
   height: 100vh;
-  background: var(--lg-bg-soft);
-  padding: 40px;
+  background-color: var(--lg-bg-soft);
+  padding: 60px 30px;
   position: fixed;
-  border-right: 1px solid rgba(57, 176, 103, 0.1);
+  left: 0;
+  top: 0;
 }
 
-.sidebar .logo-text {
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--lg-primary);
-  margin-bottom: 30px;
-}
-
-/* 主内容区 */
+/* 主内容：增加左边距，防止被遮挡 */
 .main-content {
-  margin-left: 280px;
+  margin-left: var(--sidebar-width);
   padding: 80px 60px;
-  width: 100%;
-  max-width: 1000px;
+  flex: 1;
 }
 
-/* 颜色卡片展示 */
-.color-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+/* 颜色卡片：增加圆润感 */
+.swatch-grid {
+  display: flex;
   gap: 20px;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
-.color-card {
-  border-radius: var(--radius-soft);
+.swatch-card {
+  width: 160px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   border: 1px solid #eee;
 }
 
-.swatch { height: 100px; }
-.swatch-label { padding: 12px; font-size: 12px; background: #fff; font-weight: bold; }
+.swatch-color { height: 100px; }
+.swatch-info { padding: 12px; font-size: 12px; font-weight: bold; background: #fff; }
 
-/* 警示区域  */
+/* 警示框：Logo 禁止行为 [cite: 21, 22] */
 .warning-box {
   background: #FFF5F5;
   border-left: 4px solid #EA2B2B;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 24px;
+  border-radius: 12px;
   margin-top: 20px;
 }

@@ -2,56 +2,138 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>LinguaGua 品牌门户</title>
+    <title>LinguaGua 设计系统</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <aside class="sidebar">
-        <div class="brand-title">LinguaGua</div> <p style="font-size: 12px; color: var(--lg-primary); font-weight: 600;">快乐学中文</p>
+        <div class="brand-name">LinguaGua</div>
+        <nav>
+            <a href="#mascot">IP形象</a>
+            <a href="#colors">颜色系统</a>
+            <a href="#fonts">字体规范</a>
+        </nav>
     </aside>
 
-    <main class="content">
-        <section id="identity">
-            <h1>品牌核心定位</h1>
-            <p><strong>LinguaGua</strong> 采用现代几何无衬线字体，整体风格简洁、圆润、亲和 [cite: 9]。</p>
+    <main class="main-content">
+        <section id="mascot">
+            <h1>1. IP形象（Mascot）</h1>
+            <p class="intro">整体风格简洁、圆润、亲和、年轻化。墨宝采用品牌标志性的双阶绿色。</p>
             
-            <div style="background: var(--lg-bg-soft); padding: 30px; border-radius: var(--radius-soft); display: flex; align-items: center; gap: 40px; margin-top: 30px;">
-                <img src="assets/images/illustration/mascot.png" width="120" alt="墨宝">
-                <div>
-                    <h3>IP 形象：墨宝 (Moba) [cite: 40]</h3>
-                    <p>主色采用双阶绿色，传递“轻松学语言”的品牌理念 [cite: 41, 9]。</p>
+            <div class="mascot-container">
+                <div class="mascot-images">
+                    <div class="mascot-card">
+                        <img src="assets/images/illustration/mascot.svg" alt="墨宝展示">
+                    </div>
+                    <div class="mascot-card">
+                        <img src="assets/images/illustration/mascot-sideview.svg" alt="墨宝展示">
+                    </div>
+                </div>
+                <div class="mascot-info">
+                    <ul>
+                        <li><strong>主色</strong>：采用品牌标志性的双阶绿色</li>
+                        <li><strong>点缀</strong>：脸部轮廓与嘴部使用橙黄色</li>
+                        <li><strong>面部底色</strong>：面部底色：纯黑（#000000）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="showcase-container">
+                <div class="showcase-card">
+                    <div class="showcase-bg" style="background: #17B853;"></div>
+                    <div class="showcase-info">
+                        <p style="margin: 0; font-weight: bold; font-size: 13px;">鲜绿色</p>
+                        <p style="margin: 5px 0 0 0; font-size: 12px; color: #999;">#88E744</p>
+                        <p style="margin: 4px 0 0 0; font-size: 11px; color: #999;">身体主色调</p>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-bg" style="background: #8BE33B;"></div>
+                    <div class="showcase-info">
+                        <p style="margin: 0; font-weight: bold; font-size: 13px;">亮绿色</p>
+                        <p style="margin: 5px 0 0 0; font-size: 12px; color: #999;">#16C45B</p>
+                        <p style="margin: 4px 0 0 0; font-size: 11px; color: #999;">身体亮面</p>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-bg" style="background: #0B8451;"></div>
+                    <div class="showcase-info">
+                        <p style="margin: 0; font-weight: bold; font-size: 13px;">深绿色</p>
+                        <p style="margin: 5px 0 0 0; font-size: 12px; color: #999;">#0B8451</p>
+                        <p style="margin: 4px 0 0 0; font-size: 11px; color: #999;">身体轮廓</p>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-bg" style="background: #E76F12;"></div>
+                    <div class="showcase-info">
+                        <p style="margin: 0; font-weight: bold; font-size: 13px;">深橙色</p>
+                        <p style="margin: 5px 0 0 0; font-size: 12px; color: #999;">#E76F12</p>
+                        <p style="margin: 4px 0 0 0; font-size: 11px; color: #999;">脸部轮廓(暗面)</p>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-bg" style="background: #F7A60C;"></div>
+                    <div class="showcase-info">
+                        <p style="margin: 0; font-weight: bold; font-size: 13px;">浅橙色</p>
+                        <p style="margin: 5px 0 0 0; font-size: 12px; color: #999;">#F7A60C</p>
+                        <p style="margin: 4px 0 0 0; font-size: 11px; color: #999;">脸部轮廓(明面)、嘴巴</p>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-bg" style="background: #000000;"></div>
+                    <div class="showcase-info">
+                        <p style="margin: 0; font-weight: bold; font-size: 13px;">纯黑色</p>
+                        <p style="margin: 5px 0 0 0; font-size: 12px; color: #999;">#000000</p>
+                        <p style="margin: 4px 0 0 0; font-size: 11px; color: #999;">脸部底色</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="colors" style="margin-top: 60px;">
-            <h2>色彩系统</h2>
+        <hr>
+
+        <section id="colors">
+            <h1>2. 颜色系统 (Colors)</h1>
+            <p class="intro">LinguaGua 采用充满生机的绿色，传递“轻松学语言”的品牌理念。</p>
+            
+            <h3>品牌核心色</h3>
             <div class="swatch-grid">
                 <div class="swatch-card">
                     <div class="swatch-color" style="background: var(--lg-primary);"></div>
-                    <div class="swatch-info">品牌绿 #39B067</div>
+                    <div class="swatch-info">品牌绿<br>#39B067 </div>
                 </div>
                 <div class="swatch-card">
                     <div class="swatch-color" style="background: var(--lg-bg-soft);"></div>
-                    <div class="swatch-info">背景淡色 #CDF0F1</div>
+                    <div class="swatch-info">官方背景色<br>#CDF0F1</div>
                 </div>
-                <div class="swatch-card">
-                    <div class="swatch-color" style="background: var(--moba-bright-green);"></div>
-                    <div class="swatch-info">亮绿色 #88E744</div>
-                </div>
+            </div>
+
+            <h3>墨宝 (Moba) 扩展色谱 </h3>
+            <div class="swatch-grid">
+                <div class="swatch-card"><div class="swatch-color" style="background: #88E744;"></div><div class="swatch-info">亮绿色 #88E744</div></div>
+                <div class="swatch-card"><div class="swatch-color" style="background: #F7A60C;"></div><div class="swatch-info">亮橙色 #F7A60C</div></div>
+                <div class="swatch-card"><div class="swatch-color" style="background: #24150E;"></div><div class="swatch-info">深棕黑 #24150E</div></div>
+                <div class="swatch-card"><div class="swatch-color" style="background: #16C45B;"></div><div class="swatch-info">鲜绿色 #16C45B</div></div>
             </div>
         </section>
 
-        <section id="rules" style="margin-top: 60px;">
-            <h2>禁止行为 [cite: 21]</h2>
-            <div class="logo-rules">
-                <ul style="line-height: 2;">
-                    <li>禁止拆分 “Lingua” 与 “Gua” [cite: 23]。</li>
-                    <li>禁止使用全大写 LINGUAGUA 或全小写 linguagua [cite: 13, 27]。</li>
-                    <li>禁止拉伸、压扁或改变原始比例 [cite: 26]。</li>
-                </ul>
+        <hr>
+
+        <section id="fonts">
+            <h1>3. 字体规范 (Typography)</h1>
+            <div class="font-spec-card">
+                <h2 style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 48px; color: var(--lg-primary); margin: 0;">
+                    Poppins-Bold
+                </h2>
+                <div class="font-rules">
+                    <ul>
+                        <li><strong>字符特征</strong>：笔画粗细统一，拐角均做柔化圆角处理。</li>
+                        <li><strong>字母间距</strong>：设置为紧凑模式，确保视觉平衡。</li>
+                        <li><strong>Logo 拼写</strong>：严格遵循 <strong>LinguaGua</strong> (L和G大写) 。</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>

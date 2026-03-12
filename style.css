@@ -1,6 +1,8 @@
 :root {
     /* 核心令牌 */
-    --lg-primary: #39B067;
+    --lg-primary: #16C45B;
+    --lg-secondary:#88E744;
+    --text-color:#0B8451
     --text-basic: #24150E;
     --lg-bg-soft: linear-gradient(135deg, #EFF297 0%, #9AE1BB 100%);
     --radius-soft: 24px; /* 对应“圆润、亲和”定位 [cite: 9, 11] */
@@ -94,17 +96,20 @@ hr { border: none; border-top: 1px solid #eee; margin: 60px 0; }
 
 /* 字体卡片 */
 .font-spec-card {
+    display: flex;
+    gap: 50px;
+    align-items: center;
     background: white;
-    padding: 50px;
+    padding: 40px;
     border-radius: var(--radius-soft);
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .font-rules {
-    margin-top: 30px;
-    padding: 20px;
-    background: var(--lg-bg-soft);
-    border-radius: 12px;
+    margin-top: 0;
+    padding: 0;
+    background: none;
+    border-radius: 0;
 }
 
 /* 展示场景卡片 */

@@ -2,75 +2,52 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>LinguaGua Brand Portal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>LinguaGua Brand Guideline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <aside class="sidebar">
-        <div class="brand-title">LinguaGua</div>
-        <nav>
-            <a href="#identity">核心定位</a>
-            <a href="#colors">色彩系统</a>
-            <a href="#logo">Logo 规范</a>
-            <a href="#components">UI 组件</a>
-        </nav>
-    </aside>
+<aside class="sidebar">
+    <div class="logo-text">LinguaGua</div>
+    <p style="font-size: 14px; color: var(--lg-primary);">Learn Chinese Joyfully </p>
+</aside>
 
-    <main class="main-content">
-        <section id="identity">
-            <h1>品牌核心定位</h1>
-            <p style="font-size: 18px; color: #666;">现代几何无衬线风格，主打<strong>简洁、圆润、亲和、年轻化</strong> 。</p>
-            <div style="background: var(--lg-bg-soft); padding: 30px; border-radius: var(--radius-lg); margin-top: 20px; display: flex; align-items: center; gap: 40px;">
-                <img src="assets/images/illustration/mascot.png" alt="Moba" style="width: 150px;">
-                <div>
-                    <h3>IP 形象：墨宝 (Moba) [cite: 40]</h3>
-                    <p>采用双阶绿色，传递“轻松学语言、高效做沟通”的品牌理念 [cite: 9, 41]。</p>
-                </div>
+<main class="main-content">
+    <section id="identity">
+        <h1>品牌核心定位</h1>
+        <p>现代几何无衬线风格，整体简洁、圆润、亲和、年轻化 [cite: 9]。</p>
+    </section>
+
+    <section id="colors">
+        <h2>色彩系统 (Colors)</h2>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="swatch" style="background: var(--lg-primary);"></div>
+                <div class="swatch-label">品牌绿 #39B067 </div>
             </div>
-        </section>
-
-        <section id="colors">
-            <h2>色彩系统</h2>
-            <div class="color-grid">
-                <div class="color-card">
-                    <div class="color-swatch" style="background: var(--lg-primary);"></div>
-                    <div class="color-info">品牌主色 [cite: 15]<span class="color-hex">#39B067</span></div>
-                </div>
-                <div class="color-card">
-                    <div class="color-swatch" style="background: var(--lg-bg-soft);"></div>
-                    <div class="color-info">辅助背景 [cite: 3]<span class="color-hex">#CDF0F1</span></div>
-                </div>
-                <div class="color-card">
-                    <div class="color-swatch" style="background: var(--moba-bright-green);"></div>
-                    <div class="color-info">墨宝亮绿 [cite: 45]<span class="color-hex">#88E744</span></div>
-                </div>
-                <div class="color-card">
-                    <div class="color-swatch" style="background: var(--moba-orange);"></div>
-                    <div class="color-info">墨宝亮橙 [cite: 45]<span class="color-hex">#F7A60C</span></div>
-                </div>
+            <div class="color-card">
+                <div class="swatch" style="background: var(--lg-bg-soft);"></div>
+                <div class="swatch-label">背景淡色 #CDF0F1 </div>
             </div>
-        </section>
+            <div class="color-card">
+                <div class="swatch" style="background: var(--moba-bright-green);"></div>
+                <div class="swatch-label">墨宝亮绿 #88E744 [cite: 45]</div>
+            </div>
+        </div>
+    </section>
 
-        <section id="logo">
-            <h2>Logo 禁止行为</h2>
-            <ul class="rule-list">
-                <li class="rule-item dont">拆分 “Lingua” 与 “Gua” 两个部分 [cite: 23]</li>
-                <li class="rule-item dont">为字体添加描边、阴影或渐变特效 [cite: 25]</li>
-                <li class="rule-item dont">拉伸、压扁或改变原始比例 [cite: 26]</li>
+    <section id="rules" style="margin-top: 60px;">
+        <h2>Logo 禁止行为 </h2>
+        <div class="warning-box">
+            <ul>
+                <li>禁止使用全大写 (LINGUAGUA) 或全小写 (linguagua) [cite: 13, 27]。</li>
+                <li>禁止添加描边、阴影或渐变特效 [cite: 25]。</li>
+                <li>禁止拉伸、压扁或改变原始比例 [cite: 18, 26]。</li>
             </ul>
-        </section>
-
-        <section id="components">
-            <h2>UI 组件参考</h2>
-            <p>基于品牌色定义的交互按键 [cite: 47]：</p>
-            <div style="margin-top: 20px;">
-                <button class="btn-preview" style="background: var(--btn-yellow);">学习天数 Days [cite: 51]</button>
-                <button class="btn-preview" style="background: var(--btn-green);">完成课程 Courses [cite: 52]</button>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
+</main>
 
 </body>
 </html>

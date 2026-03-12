@@ -1,69 +1,125 @@
-/* style.css */
-
+/* --- LinguaGua Design Tokens --- */
 :root {
-    /* --- 核心品牌色 --- */
-    --lg-color-primary: #39B067;       /* 品牌青绿色 [cite: 3, 15] */
-    --lg-color-bg-light: #CDF0F1;     /* 官方背景淡色  */
-    
-    /* --- IP 形象：墨宝 (Moba) 扩展色 [cite: 45] --- */
-    --lg-color-moba-bright-green: #88E744;
-    --lg-color-moba-dark-green: #0B8451;
-    --lg-color-moba-orange: #F7A60C;
-    --lg-color-moba-black: #24150E;   /* 深棕黑色 */
-    
-    /* --- App 交互组件色 [cite: 48] --- */
-    --lg-color-btn-yellow: #F7D30C;   /* 学习天数按键 */
-    --lg-color-btn-green: #16C45B;    /* 完成课程按键 */
+  /* 品牌核心色 [cite: 3, 15] */
+  --lg-primary: #39B067;
+  --lg-bg-soft: #CDF0F1;
+  
+  /* IP 形象：墨宝 (Moba) 扩展色 [cite: 45] */
+  --moba-bright-green: #88E744;
+  --moba-dark-green: #0B8451;
+  --moba-orange: #F7A60C;
+  --moba-black: #24150E;
+  
+  /* 交互组件色 [cite: 48] */
+  --btn-yellow: #F7D30C;
+  --btn-green: #16C45B;
 
-    /* --- 辅助背景渐变 [cite: 54] --- */
-    --lg-gradient-start: #EFF297;
-    --lg-gradient-end: #9AE1BB;
-
-    /* --- 字体规范 [cite: 3, 11] --- */
-    --lg-font-main: 'Poppins', sans-serif;
-    --lg-font-weight-bold: 700;
+  /* 比例与间距 */
+  --radius-lg: 24px;   /* 符合“圆润”定位  */
+  --radius-md: 12px;
+  --spacing-lg: 40px;
+  --sidebar-width: 280px;
 }
 
-/* 基础样式 */
+/* --- 基础样式 --- */
+* { box-sizing: border-box; }
 body {
-    margin: 0;
-    font-family: var(--lg-font-main);
-    color: var(--lg-color-moba-black);
-    display: flex;
+  margin: 0;
+  display: flex;
+  background-color: #fcfdfd;
+  font-family: 'Poppins', 'PingFang SC', sans-serif; /* 官方指定字体 [cite: 3] */
+  color: var(--moba-black);
+  line-height: 1.6;
 }
 
+/* --- 侧边栏 --- */
 .sidebar {
-    width: 240px;
-    height: 100vh;
-    background: var(--lg-color-gray-light);
-    border-right: 1px solid #eee;
-    padding: 20px;
-    position: fixed;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: var(--lg-bg-soft);
+  padding: var(--spacing-lg);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(57, 176, 103, 0.1);
 }
 
-.content {
-    margin-left: 280px;
-    padding: 60px;
-    max-width: 800px;
+.sidebar .brand-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--lg-primary);
+  margin-bottom: 40px;
 }
 
-/* 颜色展示块样式 */
-.swatch-group {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
+.sidebar nav a {
+  display: block;
+  text-decoration: none;
+  color: var(--moba-black);
+  padding: 12px 20px;
+  margin-bottom: 8px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: all 0.3s;
 }
 
-.swatch {
-    width: 120px;
-    height: 120px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 10px;
-    color: white;
-    font-size: 12px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+.sidebar nav a:hover {
+  background: white;
+  color: var(--lg-primary);
+  transform: translateX(5px);
+}
+
+/* --- 主内容区 --- */
+.main-content {
+  margin-left: var(--sidebar-width);
+  padding: 80px 60px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+section { margin-bottom: 80px; }
+h1 { font-size: 32px; margin-bottom: 24px; color: var(--lg-primary); }
+h2 { font-size: 24px; margin-bottom: 20px; border-left: 5px solid var(--lg-primary); padding-left: 15px; }
+
+/* --- 颜色卡片展示 --- */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.color-card {
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+.color-swatch { height: 120px; }
+.color-info { padding: 15px; font-size: 14px; font-weight: 600; }
+.color-hex { display: block; color: #999; font-family: monospace; font-weight: normal; margin-top: 4px; }
+
+/* --- 规则清单 --- */
+.rule-list { list-style: none; padding: 0; }
+.rule-item {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: var(--radius-md);
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+.rule-item.dont { border-left: 5px solid #ff4d4f; }
+.rule-item.dont::before { content: "✕"; color: #ff4d4f; margin-right: 15px; font-weight: bold; }
+
+/* --- 组件预览 --- */
+.btn-preview {
+  padding: 12px 30px;
+  border-radius: var(--radius-lg);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 15px;
+  color: white;
 }
